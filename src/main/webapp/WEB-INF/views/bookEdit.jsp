@@ -11,8 +11,8 @@
 <div>
 <form:form action="update_bookinfo" method="post" modelAttribute="library">
 <div>
-<form:label path="bookId">Book Name</form:label>
-<form:input type="text" path="bookId"/>
+
+<form:input type="hidden" path="bookId"/>
 </div>
 <div>
 <form:label path="bookName">Book Name</form:label>
