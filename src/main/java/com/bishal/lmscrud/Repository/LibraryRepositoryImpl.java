@@ -17,7 +17,7 @@ public class LibraryRepositoryImpl implements LibraryRepository {
 
 	@Autowired
 	SessionFactory sessionFactory;
-	private SessionFactory getSessionFactory() {
+	private SessionFactory gtSessionFactory() {
 		return sessionFactory;
 	}
 	private Session getsession() {
