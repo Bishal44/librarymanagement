@@ -9,8 +9,14 @@
 </head>
 <body><div>
 <form:form action="Signup" method="post" modelAttribute="usercreate">
-
-
+<div>
+<form:label path="uname">User Name</form:label>
+<form:input  type="text" path="uname"/>
+</div>
+<div>
+<form:label path="password"></form:label>
+<form:input type="password" path="password"/>
+</div>
 
 
 </form:form>
