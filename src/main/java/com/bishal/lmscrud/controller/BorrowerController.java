@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bishal.lmscrud.Service.BorrowerService;
 import com.bishal.lmscrud.model.Borrower;
@@ -19,7 +20,7 @@ public class BorrowerController {
 	@Autowired
 	BorrowerService Service;
 	@RequestMapping(value="/signup",method = RequestMethod.GET)
-	public String getbookForm(@ModelAttribute Borrower borrower) {
+	public String getsignupForm(@ModelAttribute Borrower borrower) {
 		return "BorrowerSignup";
 		
 	}
@@ -30,6 +31,12 @@ public class BorrowerController {
 			Service.saveBorrowerInfo(borrower);	
 		}
 		
+		return "redirect:/borrowerList";
+		
+	}
+	@RequestMapping(value="/deleteborrower",method = RequestMethod.GET)
+	public String Deleteborrower(@RequestParam int id) {
+		Service.deleteBorrowerInfo(id);
 		return "redirect:/borrowerList";
 		
 	}

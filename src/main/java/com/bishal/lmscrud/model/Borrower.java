@@ -17,7 +17,7 @@ public class Borrower {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="borrower_id")
-	private int BorrowerId;
+	private int borrowerId;
 	@Column(name="first_name")
 	private String firstName;
 	@Column(name="last_name")
@@ -35,10 +35,10 @@ public class Borrower {
 	private String departments;
 	private int roll;
 	public int getBorrowerId() {
-		return BorrowerId;
+		return borrowerId;
 	}
 	public void setBorrowerId(int borrowerId) {
-		BorrowerId = borrowerId;
+		borrowerId = borrowerId;
 	}
 	public String getFirstName() {
 		return firstName;
