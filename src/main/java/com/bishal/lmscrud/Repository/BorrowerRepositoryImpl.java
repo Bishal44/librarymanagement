@@ -17,13 +17,15 @@ import com.bishal.lmscrud.model.Borrower;
 public class BorrowerRepositoryImpl implements BorrowerRepository {
 	@Autowired
 	SessionFactory sessionFactory;
+	private SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
 	private Session getsession() {
-		Session session=sessionFactory.getCurrentSession();
-		if(session!=null) {
-			session=sessionFactory.openSession();
+		Session sess = getSessionFactory().getCurrentSession();
+		if (sess == null) {
+			sess = getSessionFactory().openSession();
 		}
-		
-		return session;
+		return sess;
 		
 	}
 	@Override
