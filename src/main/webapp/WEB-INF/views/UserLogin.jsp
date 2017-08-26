@@ -5,28 +5,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Signup</title>
+<title> Admin Login</title>
 </head>
-<body><div>
-<form:form action="Signup" method="post" modelAttribute="user">
+<body>
+<div>
+<form:form action="userlogin" method="post" modelAttribute="user">
 <div>
 <form:label path="uname">User Name</form:label>
-<form:input  type="text" path="uname"/>
+<form:input type="text" path="uname"/>
 </div>
 <div>
 <form:label path="password">Password</form:label>
 <form:input type="password" path="password"/>
 </div>
 <div>
-<input type="submit" value="Signup">
-<input type="reset" value ="reset">
+<form:button type="submit">Login</form:button>
+<form:button type="reset">Cancel</form:button>
 </div>
-
-
 </form:form>
 
-
 </div>
-
 </body>
 </html>
