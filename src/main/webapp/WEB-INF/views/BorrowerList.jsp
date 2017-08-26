@@ -42,7 +42,7 @@
 <td><c:out value="${borrower.password}"></c:out></td>
 
 <td>
-<a href="edit?id=${borrower.borrowerId}" >Edit</a>
+<a href="editborrower?id=${borrower.borrowerId}" >Edit</a>
 <a href="deleteborrower?id=${borrower.borrowerId}">Delete</a>
 </td>
 </tr>

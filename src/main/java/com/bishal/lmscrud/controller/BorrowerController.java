@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bishal.lmscrud.Service.BorrowerService;
 import com.bishal.lmscrud.model.Borrower;
+import com.bishal.lmscrud.model.Library;
 
 
 @Controller
@@ -44,6 +45,23 @@ public class BorrowerController {
 	public String getborrowerList(Model model) {
 		model.addAttribute("borrower", Service.getallBorrowerInfo());
 		return "BorrowerList";
+		
+	}
+	@RequestMapping(value="/editborrower",method = RequestMethod.GET)
+	public String getborrowerEditForm( Model model,@RequestParam int id) {
+		Borrower  borrower=Service.getBorrowerInfobyId(id);
+		model.addAttribute("borrower", borrower);
+		return "BorrowerEdit";
+		
+	}
+	@RequestMapping(value="/update_borrowerinfo" ,method = RequestMethod.POST)
+	public String UpdateBorrowerForm(@ModelAttribute Borrower borrower) {
+		
+		if(borrower!=null) {
+			Service.saveBorrowerInfo(borrower);	
+		}
+		
+		return "redirect:/borrowerList";
 		
 	}
 	
