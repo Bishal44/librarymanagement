@@ -56,7 +56,7 @@ public class BorrowerController {
 	}
 	@RequestMapping(value="/update_borrowerinfo" ,method = RequestMethod.POST)
 	public String UpdateBorrowerForm(@ModelAttribute Borrower borrower) {
-		
+		System.out.println("boorrower is is: "+borrower.getBorrowerId());
 		if(borrower!=null) {
 			Service.saveBorrowerInfo(borrower);	
 		}

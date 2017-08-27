@@ -30,7 +30,7 @@ public class UserRepositoryImpl implements UserRepository {
 	@Override
 	public User getUserByunameAndpass(String uname, String pass) {
 		User user=null;
-		Criteria criteria=getsession().createCriteria(User.class).add(Restrictions.eq("userName", uname))
+		Criteria criteria=getsession().createCriteria(User.class).add(Restrictions.eq("uname", uname))
 				.add(Restrictions.eq("password", pass));
 		user=(User) criteria.uniqueResult();
 		return user;

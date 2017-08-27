@@ -30,7 +30,6 @@ public class BorrowerRepositoryImpl implements BorrowerRepository {
 	}
 	@Override
 	public void saveBorrowerInfo(Borrower borrower) {
-		sessionFactory.openSession();
 		getsession().merge(borrower);
 		
 	}

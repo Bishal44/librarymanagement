@@ -16,85 +16,103 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Borrower {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="borrower_id")
+	@Column(name = "borrower_id")
 	private int borrowerId;
-	@Column(name="first_name")
+	@Column(name = "first_name")
 	private String firstName;
-	@Column(name="last_name")
+	@Column(name = "last_name")
 	private String lastName;
-	@Column(name="user_name")
+	@Column(name = "user_name")
 	private String userName;
-	@Column(name="password")
+	@Column(name = "password")
 	private String password;
 	@Column(name = "dob")
-	@DateTimeFormat(pattern="yyyy-MM-dd")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dob;
 	@Column(length = 45, nullable = false)
 	private String email;
 	private String gender;
 	private String departments;
 	private int roll;
+
 	public int getBorrowerId() {
 		return borrowerId;
 	}
+
 	public void setBorrowerId(int borrowerId) {
-		borrowerId = borrowerId;
+		this.borrowerId = borrowerId;
 	}
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public String getUserName() {
 		return userName;
 	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public Date getDob() {
 		return dob;
 	}
+
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getGender() {
 		return gender;
 	}
+
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
 	public String getDepartments() {
 		return departments;
 	}
+
 	public void setDepartments(String departments) {
 		this.departments = departments;
 	}
+
 	public int getRoll() {
 		return roll;
 	}
+
 	public void setRoll(int roll) {
 		this.roll = roll;
 	}
 
-	
-	
 }
