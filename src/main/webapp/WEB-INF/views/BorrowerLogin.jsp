@@ -11,9 +11,14 @@
 <div>
 <div>
 <form:form>
-<form:label path=""></form:label>
-<input>
-
+<div>
+<form:label path="">User Name</form:label>
+<form:input type="text" path=""/>
+</div>
+<div>
+<form:label path="">Password</form:label>
+<form:input type="text" path=""/>
+</div>
 
 </form:form>
 
