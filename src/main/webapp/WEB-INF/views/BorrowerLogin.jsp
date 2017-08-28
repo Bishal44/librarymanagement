@@ -10,14 +10,14 @@
 <body>
 <div>
 <div>
-<form:form>
+<form:form action="borrowerLogin" method="post" modelAttribute="borrower">
 <div>
-<form:label path="">User Name</form:label>
-<form:input type="text" path=""/>
+<form:label path="userName">User Name</form:label>
+<form:input type="text" path="userName"/>
 </div>
 <div>
-<form:label path="">Password</form:label>
-<form:input type="text" path=""/>
+<form:label path="password">Password</form:label>
+<form:input type="text" path="password"/>
 </div>
 
 </form:form>
