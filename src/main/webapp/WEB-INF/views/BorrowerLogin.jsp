@@ -19,7 +19,10 @@
 <form:label path="password">Password</form:label>
 <form:input type="text" path="password"/>
 </div>
-
+<div>
+<form:button type="submit">Signup</form:button>
+<form:button type="reset">Reset</form:button>
+</div>
 </form:form>
 
 </div>

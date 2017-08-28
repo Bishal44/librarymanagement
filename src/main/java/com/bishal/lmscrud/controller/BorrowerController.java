@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bishal.lmscrud.Service.BorrowerService;
 import com.bishal.lmscrud.model.Borrower;
-import com.bishal.lmscrud.model.Library;
+
 
 
 @Controller
@@ -62,6 +62,21 @@ public class BorrowerController {
 		}
 		
 		return "redirect:/borrowerList";
+		
+	}
+	@RequestMapping(value="/login",method = RequestMethod.GET)
+	public String getLoginForm(@ModelAttribute Borrower borrower) {
+		return "BorrowerLogin";
+		
+	}
+	@RequestMapping(value="/borrowerLogin" ,method = RequestMethod.POST)
+	public String loginUser(@ModelAttribute Borrower borrower) {
+		
+		if(borrower!=null) {
+			Service.getUserByunameAndpass(borrower.getUserName(), borrower.getPassword());
+		}
+		
+		return "redirect:/bookList";
 		
 	}
 	
