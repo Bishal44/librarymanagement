@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-<form:form action="save_bookinfo" method="post" modelAttribute="library">
+<form:form action="save_bookinfo" method="post" modelAttribute="library" enctype="multipart/form-data">
 <div>
 <form:label path="bookName">Book Name</form:label>
 <form:input type="text" path="bookName"/>
@@ -30,6 +30,10 @@
 <form:label path="faculty">Faculty</form:label>
 <form:select items="${facultylist}" path="faculty"></form:select>
 
+</div>
+<div>
+<label>Upload book</label>
+<input type="file" name="file">
 </div>
 
 <div>

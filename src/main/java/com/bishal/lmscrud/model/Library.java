@@ -24,6 +24,15 @@ public class Library {
 	private int price;
 	@Column(name="faculty_name")
 	private String faculty;
+	
+	@Column(name="file_url")
+	private String file;
+	public String getFile() {
+		return file;
+	}
+	public void setFile(String file) {
+		this.file = file;
+	}
 	public int getBookId() {
 		return bookId;
 	}
